@@ -1,0 +1,124 @@
+/*
+File: style.css
+Description: my css is file is for the custome sytling for the page, it also setsa dark page background and text color
+for the page. it also implements the checkerboard effect for the table and styles the form and error messages.
+*/
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #000000; 
+    color: #1ae408; 
+}
+
+
+/* Main Header Styling */
+.mainheader {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: .8rem;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+#tableForm {
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #0b3662;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#tableForm legend {
+    font-weight: bold;
+    font-style: italic;
+    color: #333;
+}
+
+#tableForm input[type="number"] {
+    border-radius: 0.25rem;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#tableForm button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#tableForm button:hover {
+    background-color: #45a049;
+}
+
+/* Table Styling */
+#mytable {
+    margin-top: 20px;
+    width: auto;
+    border-collapse: collapse;
+}
+
+#mytable, th, td {
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+}
+
+td, th {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+/* Checkerboard Effect */
+#mytable tr:nth-child(even) td:nth-child(odd),
+#mytable tr:nth-child(odd) td:nth-child(even) {
+    background-color: #000000;
+    color: white;
+}
+
+#mytable tr:nth-child(even) td:nth-child(even),
+#mytable tr:nth-child(odd) td:nth-child(odd) {
+    background-color: #027d02;
+    color: white;
+}
+
+.no-border {
+    border: none;
+}
+
+/* Error Message Styling */
+.error-message {
+    display: none;
+    color: #B22222;
+    background-color: #FFE4E1;
+    border: 1px solid #B22222;
+    border-radius: 5px;
+    padding: 8px;
+    position: absolute;
+    left: 105%;
+    top: 0;
+    width: 200px;
+    font-size: 0.9em;
+    box-shadow: 0 0 10px rgba(163, 49, 49, 0.1);
+}
+
+.error-message::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #B22222 transparent transparent;
+}
+
+#max_col_value-error, #min_col_value-error, #max_row_value-error, #min_row_value-error {
+    color: red;
+}
