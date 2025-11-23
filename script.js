@@ -2,7 +2,8 @@
  File: script.js
  Author: Luka Metias
  HW4 Part 1 – Validation with jQuery Validation Plugin
- Description:
+ Description: my javascript file for HW4 Part 1 that implements form validation using the jQuery Validation Plugin. 
+ it generates a multiplication table based on user input for minimum and maximum row and column values.
 */
 
 $(document).ready(function () {
